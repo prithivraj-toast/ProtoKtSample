@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Person {
+  string name = 1;
+  int32 id = 2;
+  string phone = 3;
+  PhoneType phoneType = 4;
+  oneof cake {
+    bool have = 5;
+    bool eat = 6;
+  }
+}
+
+enum PhoneType {
+  HOME = 0;
+  MOBILE = 1;
+}
