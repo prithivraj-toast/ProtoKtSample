@@ -7,5 +7,9 @@ private fun main() {
         cake = Person.Cake.Have(true)
     }
 
-    println(person.cake)
+    when(person.cake) {
+        is Person.Cake.Have -> println("Have")
+        is Person.Cake.Eat -> println("Eat")
+        null -> println("No cake")
+    }
 }
